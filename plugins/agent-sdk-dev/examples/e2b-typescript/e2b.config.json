@@ -1,0 +1,12 @@
+{
+  "template": "anthropic-claude-code",
+  "buildCommand": "npm install && npm run build",
+  "startCommand": "node dist/index.js",
+  "env": {
+    "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+    "NODE_ENV": "production"
+  },
+  "timeout": 300000,
+  "memory": 2048,
+  "cpu": 2
+}

@@ -1,0 +1,32 @@
+{
+  "name": "claude-agent-e2b-example",
+  "version": "1.0.0",
+  "description": "Claude Agent SDK deployed to E2B sandbox",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --loader ts-node/esm src/index.ts",
+    "dev": "node --loader ts-node/esm --watch src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "deploy:ephemeral": "node --loader ts-node/esm deploy/e2b-ephemeral.ts",
+    "deploy:persistent": "node --loader ts-node/esm deploy/e2b-persistent.ts",
+    "e2b:build-template": "e2b template build",
+    "e2b:list": "e2b sandbox list",
+    "e2b:cleanup": "node --loader ts-node/esm scripts/cleanup-sandboxes.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0",
+    "@e2b/code-interpreter": "^1.0.0",
+    "@e2b/sdk": "^1.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

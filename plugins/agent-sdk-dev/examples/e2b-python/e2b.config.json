@@ -1,0 +1,12 @@
+{
+  "template": "anthropic-claude-code",
+  "buildCommand": "pip install -r requirements.txt",
+  "startCommand": "python src/main.py",
+  "env": {
+    "ANTHROPIC_API_KEY": "$ANTHROPIC_API_KEY",
+    "PYTHON_ENV": "production"
+  },
+  "timeout": 300000,
+  "memory": 2048,
+  "cpu": 2
+}
